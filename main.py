@@ -92,7 +92,7 @@ def main():
                 last_frame = tracks_list[idx]
                 cur_frame = tracks_list[idx + 1]
                 # print(last_frame, cur_frame)
-                cv2.line(frame, last_frame, cur_frame, kalman.track_color, 2)
+                cv2.line(frame, tuple(last_frame), tuple(cur_frame), kalman.track_color, 2)
 
         cv2.putText(frame, str(frame_cnt), (0, 50), color=const.RED, fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=1.5)
         cv2.imshow('Demo', frame)
